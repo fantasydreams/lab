@@ -17,10 +17,10 @@ public class Plane : MonoBehaviour {
 	void Update () {
         if (Plane_Trigger)
         {
-            //if (TimeJuede.OverTime(ref time_record, Over_Milliseconds))
-            //{
+            if (TimeJuede.OverTime(ref time_record, Over_Milliseconds))
+            {
                 animator.SetTrigger("planeTrigger");
-            //}
+            }
             Plane_Trigger = false;
         }
 	}

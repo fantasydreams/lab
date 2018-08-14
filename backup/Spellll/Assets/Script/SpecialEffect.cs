@@ -16,10 +16,10 @@ public class SpecialEffect : MonoBehaviour {
 	void Update () {
         if (isActivated)
         {
-            //if (TimeJuede.OverTime(ref timeRecord, Over_Milliseconds))
-            //{
+            if (TimeJuede.OverTime(ref timeRecord, Over_Milliseconds))
+            {
                 Anitor.SetTrigger("isActivated");
-            //}
+            }
             isActivated = false;
         }
 	}

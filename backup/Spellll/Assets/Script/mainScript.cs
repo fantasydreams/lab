@@ -8,8 +8,6 @@ using UnityEngine.UI;
 
 public class mainScript : MonoBehaviour {
 
-    private Text prit;
-    public GUIText gui;
     //定义基本信息  
     private string portName = "COM3";
     public int baudRate = 9600;
@@ -22,12 +20,9 @@ public class mainScript : MonoBehaviour {
     Thread dataReceiveThread;
     Thread controlAnimator;
     private Queue<CMD_TYPE> cmdQueue;
-    //发送  
-    string message = "";
 
 
-
-    //来自arduino板的控制命令，目前支持范围-128-127.
+    //来自arduino板的控制命令，目前支持范围为char所能容纳的范围.
     private enum CMD_TYPE
     {
         plane = (int)'a',
